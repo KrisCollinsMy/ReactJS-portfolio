@@ -1,0 +1,24 @@
+.section-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100vw - 60px);
+  height: 100vh;
+  /* backdrop-filter: blur(10px); */
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  padding: 30px;
+  overflow-y: scroll;
+}
+
+.show {
+  opacity: 1;
+}
+
+@media (max-width: 1000px) {
+  .section-container {
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.7);
+  }
+}

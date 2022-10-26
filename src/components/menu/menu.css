@@ -1,0 +1,174 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.menu-container {
+  z-index: 4;
+  position: fixed;
+  top: 30%;
+  left:30%;
+  text-align: center;
+  font-family: monospace;
+  margin: auto;
+  /* right: 30px; */
+  /* top: 30px;
+    padding-right: 12px; */
+  /* border-right: 4px solid #db4d59; */
+  /* font-family: AvenirBold, sans-serif; */
+  letter-spacing: 2px;
+  transition: all 1s ease-in-out;
+  /* animation: fadeIn 3s; */
+  font-size: 1rem;
+  width: 30%;
+
+  /* position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center; */
+}
+
+#typing-demo{
+position: relative;
+}
+
+.hide {
+  display: none;
+}
+
+.collapse .menu-section {
+  opacity: 0;
+}
+
+.home {
+  top: 80px;
+  right: 80px;
+}
+
+.title {
+  color: #db4d59;
+  font-size: 18px;
+  text-align: right;
+}
+
+.menu-section {
+  font-family: AvenirBold, sans-serif;
+  cursor: pointer;
+  line-height: 42px;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(82, 74, 60);
+  text-align: end;
+  transition: all 0.3s ease-in-out;
+}
+
+.home .menu-section {
+  font-size: 72px;
+  line-height: 82px;
+  letter-spacing: 2px;
+}
+
+.home .menu-section:hover,
+.home .hovered {
+  font-size: 82px;
+}
+
+.menu-section:hover,
+.hovered {
+  font-size: 42px;
+}
+.clicked {
+  font-size: 42px;
+  color: #db4d59;
+}
+.ityped-cursor {
+  /* font-size: 2.2rem; */
+  opacity: 1;
+  -webkit-animation: blink 0.3s infinite;
+  -moz-animation: blink 0.3s infinite;
+  animation: blink 0.3s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes blink {
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes blink {
+  100% {
+    opacity: 0;
+  }
+}
+
+/* .wrapper {
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+  
+  .typing-demo {
+    top:0;
+    text-align: center;
+    width: 70ch;
+    animation: typing 2.5s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 1.5em;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  } */
+
+@media (max-width: 1000px) {
+  .menu-section {
+    display: none;
+  }
+  .home .menu-section {
+    display: block;
+    font-size: 46px;
+    line-height: 56px;
+  }
+  .menu-container {
+    top: 0;
+    right: 0;
+    transition: height 0.8s, right 0.2s, top 0.6s ease-in-out;
+    border-right: 4px solid #db4d59;
+    height: 64px;
+    z-index: 1;
+  }
+  .home {
+    border-top: 0;
+    top: 60px;
+    right: 20px;
+    height: 200px;
+    background: transparent;
+  }
+}
